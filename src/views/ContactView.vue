@@ -96,8 +96,17 @@ const handleSubmit = async () => {
     <div class="extra">
       <p>Tu peux aussi me retrouver sur :</p>
       <ul>
-        <li><span class="label">GitHub :</span> ton-github</li>
-        <li><span class="label">LinkedIn :</span> ton-linkedin</li>
+      <div class="social-links">
+  <a href="https://github.com/Morin90" target="_blank" rel="noopener noreferrer">
+    <img src="/icons/github.svg" alt="GitHub" />
+    GitHub : Morin90
+  </a>
+
+  <a href="https://www.linkedin.com/in/julien-morin-b96b4b2ba/" target="_blank" rel="noopener noreferrer">
+    <img src="/icons/linkedin.svg" alt="LinkedIn" />
+    LinkedIn : Julien Morin
+  </a>
+</div>
       </ul>
     </div>
   </section>
