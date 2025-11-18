@@ -1,6 +1,5 @@
 <script setup>
 const cvUrl = '/cv-julien-morin.pdf'
-const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
 </script>
 
 <template>
@@ -20,10 +19,14 @@ const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
 
       <div class="photo-card">
         <div class="photo-inner">
-          <img :src="photoUrl" alt="Photo de Julien Morin" />
+          <!-- 🔁 ICI : chemin direct vers le fichier du dossier public -->
+          <img
+            src="/Julien_Morin_AJC_Formation.JPG"
+            alt="Photo de Julien Morin"
+          />
         </div>
         <p class="photo-caption">
-          Julien Morin – Développeur web & mainframe
+          Julien Morin – Développeur web &amp; mainframe
         </p>
       </div>
     </header>
@@ -38,7 +41,7 @@ const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
           responsabilité.
         </p>
         <p>
-          Je me suis formé au développement web (front & back) puis à l’univers des
+          Je me suis formé au développement web (front &amp; back) puis à l’univers des
           <strong>mainframes</strong> (COBOL, MVS, DB2). Aujourd’hui, je cherche à mettre
           ces compétences au service de projets concrets, dans un environnement stimulant.
         </p>
@@ -56,7 +59,7 @@ const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
     </div>
 
     <div class="card timeline">
-      <h3>Formations & expériences</h3>
+      <h3>Formations &amp; expériences</h3>
 
       <div class="timeline-item">
         <div class="timeline-header">
@@ -86,14 +89,14 @@ const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
           <span class="periode">AJC Formation · 2025</span>
         </div>
         <p class="desc">
-          COBOL en environnement MVS, JCL & VSAM, DB2/SQL, programmation transactionnelle,
+          COBOL en environnement MVS, JCL &amp; VSAM, DB2/SQL, programmation transactionnelle,
           outils Eclipse RDZ, TSO, ISPF, Pacbase.
         </p>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-header">
-          <h4>Conducteur d’engins & chef d’équipe TP</h4>
+          <h4>Conducteur d’engins &amp; chef d’équipe TP</h4>
           <span class="periode">Colas Rhône-Alpes · 2006 - 2023</span>
         </div>
         <p class="desc">
@@ -104,5 +107,6 @@ const photoUrl = '/Julien_Morin_AJC_Formation.JPG'
     </div>
   </section>
 </template>
+
 
 

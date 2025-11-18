@@ -5,21 +5,42 @@ const nom = ref('')
 const email = ref('')
 const message = ref('')
 const sent = ref(false)
+const loading = ref(false)
+const error = ref('')
 
-const handleSubmit = () => {
-  // Ici tu pourras brancher un backend, un service d’email, etc.
-  console.log('Formulaire envoyé :', {
-    nom: nom.value,
-    email: email.value,
-    message: message.value
-  })
-  sent.value = true
-  setTimeout(() => {
-    sent.value = false
-  }, 2500)
-  nom.value = ''
-  email.value = ''
-  message.value = ''
+const handleSubmit = async () => {
+  loading.value = true
+  sent.value = false
+  error.value = ''
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: nom.value,
+        email: email.value,
+        message: message.value
+      })
+    })
+
+    if (!res.ok) {
+      const body = await res.json().catch(() => null)
+      throw new Error(body?.error || 'Erreur lors de l’envoi du message')
+    }
+
+    sent.value = true
+    nom.value = ''
+    email.value = ''
+    message.value = ''
+  } catch (e) {
+    console.error(e)
+    error.value = e.message || 'Une erreur est survenue'
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
@@ -60,12 +81,15 @@ const handleSubmit = () => {
           rows="5"
           placeholder="Parle-moi de ton projet ou de ta demande..."
           required
-        />
+        ></textarea>
       </div>
 
       <div class="actions">
-        <button type="submit" class="btn primary">Envoyer</button>
-        <span v-if="sent" class="sent">Merci, ton message a bien été simulé 👍</span>
+        <button type="submit" class="btn primary" :disabled="loading">
+          {{ loading ? 'Envoi en cours...' : 'Envoyer' }}
+        </button>
+        <span v-if="sent" class="sent">Merci, ton message a bien été envoyé 👍</span>
+        <span v-if="error" class="sent" style="color: #f97373;">{{ error }}</span>
       </div>
     </form>
 
@@ -78,5 +102,6 @@ const handleSubmit = () => {
     </div>
   </section>
 </template>
+
 
 

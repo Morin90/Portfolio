@@ -102,9 +102,9 @@ const softSkills = [
 const hobbies = ['Football', 'Jeux vidéo', 'Cuisine']
 
 const languages = [
-  { nom: 'Français', niveau: 'Langue maternelle' },
-  { nom: 'Anglais', niveau: 'A2' },
-  { nom: 'Espagnol', niveau: 'A1' }
+  { nom: 'Français ', niveau: 'Langue maternelle' },
+  { nom: 'Anglais ', niveau: 'A2' },
+  { nom: 'Espagnol ', niveau: 'A1' }
 ]
 </script>
 
@@ -115,7 +115,7 @@ const languages = [
       <!-- Présentation sur toute la largeur -->
       <div class="hero-text">
         <h2>
-          Salut, moi c’est <span class="accent">Julien Morin</span> 👋
+          Salut, moi c’est <span class="accent">Julien Morin</span>
         </h2>
         <p class="hero-subtitle">
           Développeur web et mainframe motivé et passionné, avec une base solide
