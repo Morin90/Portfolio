@@ -63,6 +63,17 @@ const cvUrl = '/cv-julien-morin.pdf'
 
       <div class="timeline-item">
         <div class="timeline-header">
+          <h4>Formation Grands systèmes (Mainframe)</h4>
+          <span class="periode">AJC Formation · 2025</span>
+        </div>
+        <p class="desc">
+          COBOL en environnement MVS, JCL &amp; VSAM, DB2/SQL, programmation transactionnelle,
+          outils Eclipse RDZ, TSO, ISPF, Pacbase.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header">
           <h4>Stage développeur web junior</h4>
           <span class="periode">Cegid · 2024</span>
         </div>
@@ -80,17 +91,6 @@ const cvUrl = '/cv-julien-morin.pdf'
         <p class="desc">
           HTML, CSS, JavaScript, Vue.js, PHP, Symfony, MySQL, GitHub, Docker, Figma,
           sécurité web, éco-conception, gestion de projet.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h4>Formation Grands systèmes (Mainframe)</h4>
-          <span class="periode">AJC Formation · 2025</span>
-        </div>
-        <p class="desc">
-          COBOL en environnement MVS, JCL &amp; VSAM, DB2/SQL, programmation transactionnelle,
-          outils Eclipse RDZ, TSO, ISPF, Pacbase.
         </p>
       </div>
 
